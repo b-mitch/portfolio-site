@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, NavLink, useNavigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
+  const NavBar = () => {
+      return (
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/#about">About Me</NavLink>
+            </li>
+            <li>
+              <NavLink to="/#projects">Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/#skills">Skills</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact-me">Contact Me</NavLink>
+            </li>
+          </ul>
+        </nav>
+      )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="nav">
+        <NavBar />
+      </div>
     </div>
   );
 }
