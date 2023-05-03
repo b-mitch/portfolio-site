@@ -4,11 +4,11 @@
     box-sizing: border-box;
   }
 
-body {
+.body {
     font-family: 'Roboto Mono', "Courier New", monospace;
 }
 
-header {
+.header {
     background-color: midnightblue;
     color: white;
     position: relative;
@@ -46,13 +46,13 @@ nav li {
     padding: 5px 10px 5px 0px;
 }
 
-nav a {
+nav a:-webkit-any-link {
     color: white;
     font-size: 18px;
     text-decoration: none;
 }
 
-a {
+a:-webkit-any-link {
     cursor: pointer;
     font-family: 'Poppins', Tahoma, sans-serif;
     text-decoration: none;
@@ -68,7 +68,7 @@ a {
     transition: color 0.3s;
 }
 
-a:hover {
+a:-webkit-any-link:hover {
     color: darkorange;
     transition: color 0.3s;
 }
@@ -158,13 +158,6 @@ p:first-letter {
     margin-left: 1.5em;
 }
 
-footer {
-    position: relative;
-    width: 100%;
-    bottom: 10px;
-    text-align: center;
-}
-
 #contact-logos {
     margin-top: 20px;
 }
@@ -195,8 +188,18 @@ h1 {
     margin: auto 0;
 }
 
-.bottom {
-    position:fixed;
+.footer {
+    position: relative;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 770px) {
@@ -210,8 +213,14 @@ h1 {
 }
 
 @media only screen and (max-width: 700px) {
+    .heading h2 {
+        float: left;
+        margin-left: 5px;
+        margin-top: 0;
+        font-size: 1.25em;
+    }
     nav li {
-        padding: 5px 0px;
+        padding: 5px 2px;
     }
     .grid-container {
         grid-template: 50% 20% 30% / 1fr;
@@ -236,12 +245,6 @@ h1 {
 }
 
 @media only screen and (max-width: 620px) {
-    .heading h2 {
-        float: left;
-        margin-left: 1px;
-        margin-top: 0;
-        font-size: 1.25em;
-    }
     nav li {
         padding: 0;
         margin: 0;

@@ -6,9 +6,14 @@ import Skills from './Skills';
 export default function Home() {
     return (
         <div className='home'>
-            <About />
-            <Projects />
-            <Skills />
+            <div className='body'>
+                <About />
+                <Projects />
+                <Skills />
+            </div>
+            <div className="footer">
+                <h6>&copy; Copyright. All Rights Reserved.</h6>
+            </div>
         </div>
     )
 }
