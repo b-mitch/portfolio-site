@@ -1,6 +1,8 @@
 import React from 'react';
-import { Routes, Route, NavLink, useNavigate } from 'react-router-dom';
+import { Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
+import Home from './Components/Home/Home';
+import Contact from './components/contact/Contact';
 
 function App() {
 
@@ -18,7 +20,7 @@ function App() {
               <NavLink to="/#skills">Skills</NavLink>
             </li>
             <li>
-              <NavLink to="/contact-me">Contact Me</NavLink>
+              <NavLink to="/contact">Contact Me</NavLink>
             </li>
           </ul>
         </nav>
@@ -29,6 +31,11 @@ function App() {
     <div className="App">
       <div className="nav">
         <NavBar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );
