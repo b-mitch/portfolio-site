@@ -1,48 +1,51 @@
-import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/home/Home';
 import Contact from './components/contact/Contact';
+import NavBar from './components/nav/NavBar';
 
 function App() {
+  const [aboutStyles, setAboutStyles] = useState(false);
+  const [projectsStyles, setProjectsStyles] = useState(false);
+  const [skillsStyles, setSkillsStyles] = useState(false);
 
-  const NavBar = () => {
-      return (
-        <div className='header'>
-          <nav>
-            <div class="heading">
-              <h2>Brenden Mitchum</h2>
-            </div>
-            <ul>
-              <li>
-                <a className="click1"><NavLink to="/#about" className="click1">About Me</NavLink></a>
-              </li>
-              <li>
-                <a className="click2"><NavLink to="/#projects" className="click2">Projects</NavLink></a>
-              </li>
-              <li>
-                <a className="click3"><NavLink to="/#skills" className="click3">Skills</NavLink></a>
-              </li>
-              <li>
-                <NavLink to="/contact">Contact Me</NavLink>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )
+  const handleClick = (e) => {
+
+    const clicked = e.target.className;
+
+    if (clicked === 'click1') {
+      setAboutStyles(true);
+      setProjectsStyles(false);
+      setSkillsStyles(false);
+    }
+    if (clicked === 'click2') {
+      setAboutStyles(false);
+      setProjectsStyles(true);
+      setSkillsStyles(false);
+    }
+    if (clicked === 'click3') {
+      setAboutStyles(false);
+      setProjectsStyles(false);
+      setSkillsStyles(true);
+    }
   }
 
   return (
     <div className="App">
-      <div className="nav">
-        <NavBar />
+        <NavBar handleClick={handleClick}/>
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={
+            <Home 
+              aboutStyles={aboutStyles}
+              projectsStyles={projectsStyles}
+              skillsStyles={skillsStyles} 
+            />
+          }/>
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-    </div>
   );
 }
 

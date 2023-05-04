@@ -212,15 +212,18 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 720px) {
     .heading h2 {
         float: left;
         margin-left: 5px;
         margin-top: 0;
         font-size: 1.25em;
     }
-    nav li {
-        padding: 5px 2px;
+    nav a:-webkit-any-link {
+        font-size: 16px;
+    }
+    nav {
+        text-align: none;
     }
     .grid-container {
         grid-template: 50% 20% 30% / 1fr;
@@ -244,15 +247,10 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 640px) {
     nav li {
-        padding: 0;
+        padding: 0 2.5px;
         margin: 0;
-    }
-    nav a {
-        padding: 0;
-        margin: 0;
-        font-size: 1em;
     }
     nav ul {
         width: 60%;

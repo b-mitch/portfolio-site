@@ -1,9 +1,19 @@
 import React from 'react';
 
-export default function About() {
+export default function About({ aboutStyles }) {
+
+    let altStyle;
+    if (aboutStyles) {
+        altStyle = {
+            color:'darkorange',
+            fontSize:'200%', 
+            marginLeft:'.5em'
+        }
+    }
+
     return (
         <div id="about" className="about-me">
-          <h2 className="grow1">About Me</h2>
+          <h2 style={altStyle} className="grow1">About Me</h2>
           <div className="grid-container">
             <div className="image-container">
                 <img src="./images/me.jpg" alt="photo of Brenden"/>
