@@ -1,9 +1,19 @@
 import React from 'react';
 
-export default function Skills() {
+export default function Skills({ skillsStyles }) {
+
+    let altStyle;
+    if (skillsStyles) {
+        altStyle = {
+            color:'darkorange',
+            fontSize:'200%', 
+            marginLeft:'.5em'
+        }
+    }
+
     return (
         <div id="skills" className="skills">
-          <h2 className="grow3">Skills</h2><br/>
+          <h2 style={altStyle} className="grow3">Skills</h2><br/>
           <div className="logo-container">
             <i className="fa-brands fa-html5 fa-5x"></i>
             <i className="fa-brands fa-css3-alt fa-5x"></i>
