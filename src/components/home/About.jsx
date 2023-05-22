@@ -18,7 +18,7 @@ export default function About({ aboutStyles }) {
             <div className="image-container">
                 <img src="./images/me.jpg" alt="photo of Brenden"/>
             </div>
-            <div className="p1"><p>I'm Brenden; a Marine Scientist… turned Realtor… turned Programmer. My education in a STEM field helped feed my inherently inquisitive nature. What do I want to do? Who do I want to be? What kind of impact do I want to make during my time in this universe? Also, questions about the world and its inhabitants. How should we interact with our non-human world? Why do we do what we do? How can we do better?</p><br/></div>
+            <div className="p1"><p>I'm Brenden; a Marine Scientist… turned Realtor… turned Programmer. My education in a STEM field fed my inherently inquisitive nature and fueled a life of questions.</p><ul><li>How can I make a positive impact in this world?</li><li>How should we interact with our non-human world?</li><li>Why do we do what we do?</li><li>How can we do better?</li></ul></div>
             <div className="p2"><p>While ample questions remain, learning how to program has helped me better navigate this wild world. Some of our questions can be resolved (often erroneously) with a few simple keystrokes. For others, answers remain elusive. Nevertheless, I have learned that better questions lead to better answers. Finding solutions to these questions through creativity & critical thinking is my passion. And as a Developer, I get to live my passion every day.</p></div> 
           </div>
         </div>
