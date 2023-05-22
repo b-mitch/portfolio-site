@@ -222,6 +222,18 @@ h1 {
     text-align: center;
 }
 
+@media only screen and (min-width: 1800px) {
+    .image-container {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .grid-container {
+        margin-top: 30px;
+    }
+}
+
 @media only screen and (max-width: 770px) {
     #contact-logos {
         display: none;
