@@ -2,8 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     background-color: black;
     color: white;
+}
+
+main {
+    position: relative;
+    margin-top: 20px;
+    margin: 1em 1em;
 }
 
 .body {
@@ -68,30 +77,9 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
-.projects a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.projects a:hover {
-    color: darkorange;
-    transition: color 0.3s;
-}
-
 a:-webkit-any-link:hover {
     color: darkorange;
     transition: color 0.3s;
-}
-
-.in-dev a:hover {
-    color: black;
-    cursor: text;
-}
-
-main {
-    position: relative;
-    margin-top: 20px;
-    margin: 1em 1em;
 }
 
 .about-me {
@@ -162,13 +150,23 @@ p:first-letter {
 
 .projects {
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .projects ul {
     position: relative;
     margin-left: 1.5em;
     list-style: none;
+}
+
+.projects a:visited {
+    color: darkgray;
+    text-decoration: none;
+}
+
+.projects a:hover {
+    color: darkorange;
+    transition: color 0.3s;
 }
 
 .skills {
