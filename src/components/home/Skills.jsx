@@ -21,7 +21,9 @@ export default function Skills({ skillsStyles }) {
             <i className="fa-brands fa-square-js fa-5x"></i>
             <i className="fa-brands fa-react fa-5x"></i>
             <i className="fa-brands fa-node-js fa-5x"></i>
-            <div className="icon"><img src={sql} alt="sql icon"/></div>
+            <i class="fa-brands fa-python fa-5x"></i>
+            <i class="fa-brands fa-aws fa-5x"></i>
+            <i class="fa-brands fa-docker fa-5x"></i>
           </div>
         </div>
     )
