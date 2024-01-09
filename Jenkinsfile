@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Configure git credentials and deploy to GitHub Pages
-                    withCredentials([usernamePassword(credentialsId: 'dcf69d95-b6c6-4d70-80bf-f7a0c78f5072', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PAT')]) {
+                    withCredentials([usernamePassword(credentialsId: 'dcf69d95-b6c6-4d70-80bf-f7a0c78f5072', passwordVariable: 'GIT_PAT')]) {
                         sh "git config --global credential.helper store"
                         sh "echo 'https://b-mitch:${GIT_PAT}@github.com' > ~/.git-credentials"
                         sh 'yarn run deploy'
