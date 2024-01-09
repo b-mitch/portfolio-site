@@ -25,14 +25,13 @@ pipeline {
         stage('Deploy to GitHub Pages') {
             steps {
                 script {
-                    // Configure git credentials
+                    // Configure git credentials and deploy to GitHub Pages
                     withCredentials([usernamePassword(credentialsId: 'dcf69d95-b6c6-4d70-80bf-f7a0c78f5072', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
                         sh '''
                         git config --global user.name "${GIT_USERNAME}"
                         git config --global user.password "${GIT_PASSWORD}"
+                        yarn run deploy
                         '''
-                    // Deploy to GitHub Pages
-                    sh 'yarn run deploy'
                     }
                 }
             }
