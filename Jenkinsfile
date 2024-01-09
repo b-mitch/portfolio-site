@@ -23,9 +23,8 @@ pipeline {
                     // Configure git credentials and deploy to GitHub Pages
                     withCredentials([usernamePassword(credentialsId: 'dcf69d95-b6c6-4d70-80bf-f7a0c78f5072', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PASSWORD')]) {
                         sh '''
-                        git config --global user.name "${GIT_USERNAME}"
-                        git config --global user.password "${GIT_PASSWORD}"
-                        git push test_jenkins
+                        sh "git config --global credential.helper '!f() { echo username=\$GIT_USERNAME; echo password=\$GIT_PASSWORD; }; f'"
+                        yarn run deploy
                         '''
                     }
                 }
