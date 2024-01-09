@@ -25,7 +25,7 @@ pipeline {
                         sh '''
                         git config --global user.name "${GIT_USERNAME}"
                         git config --global user.password "${GIT_PASSWORD}"
-                        yarn run deploy
+                        git push test_jenkins
                         '''
                     }
                 }
