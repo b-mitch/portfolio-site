@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Deploy to GitHub Pages
-                    sh 'gh-pages -d build'
+                    sh 'yarn run deploy'
                 }
             }
         }
