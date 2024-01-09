@@ -7,7 +7,7 @@ pipeline {
                 script {
                     // Check node and yarn versions
                     sh 'node -v'
-                    sh 'yarn -v'
+                    sh 'yarn --version'
                     // Install dependencies and build the React app
                     sh 'yarn install'
                     sh 'yarn build'
