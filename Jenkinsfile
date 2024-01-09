@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        GIT_COMMITTER_NAME = 'b-mitch_jenkins'
+        GIT_COMMITTER_EMAIL = 'bmitchum.dev@gmail.com'
+    }
+
     tools {nodejs 'node'}
 
     stages {
@@ -20,6 +25,9 @@ pipeline {
         stage('Deploy to GitHub Pages') {
             steps {
                 script {
+                    // Configure git name and email
+                    sh 'git config --global user.name $GIT_COMMITTER_NAME'
+                    sh 'git config --global user.email $GIT_COMMITTER_EMAIL'
                     // Deploy to GitHub Pages
                     sh 'yarn run deploy'
                 }
