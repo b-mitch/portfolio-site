@@ -22,13 +22,8 @@ pipeline {
                 script {
                     // Configure git credentials and deploy to GitHub Pages
                     withCredentials([usernamePassword(credentialsId: 'dcf69d95-b6c6-4d70-80bf-f7a0c78f5072', usernameVariable: 'GIT_USERNAME', passwordVariable: 'GIT_PAT')]) {
-                        sh '''
-                        git config --global credential.helper '!f() { echo "username=${GIT_USERNAME}"; echo "password=${GIT_PAT}"; }; f'
-                        git config --global user.email "bmitchum.dev@gmail.com"
-                        git config --global user.name "b-mitch_jenkins"
-                        git config --global user.password "${GIT_PAT}"
-                        git config --global credential.helper "store --file ~/.git-credentials"
-                        '''
+                        sh "git config --global credential.helper store"
+                        sh "echo 'https://b-mitch:${GIT_PAT}@github.com' > ~/.git-credentials"
                         sh 'yarn run deploy'
                     }
                 }
