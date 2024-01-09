@@ -1,11 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        GIT_COMMITTER_NAME = 'b-mitch'
-        GIT_COMMITTER_EMAIL = 'bmitchum.dev@gmail.com'
-    }
-
     tools {nodejs 'node'}
 
     stages {
