@@ -5,6 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    // Check node and yarn versions
+                    sh 'node -v'
+                    sh 'yarn -v'
                     // Install dependencies and build the React app
                     sh 'yarn install'
                     sh 'yarn build'
