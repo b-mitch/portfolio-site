@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_COMMITTER_NAME = 'b-mitch_jenkins'
+        GIT_COMMITTER_NAME = 'b-mitch'
         GIT_COMMITTER_EMAIL = 'bmitchum.dev@gmail.com'
     }
 
