@@ -1,5 +1,4 @@
 import React from 'react';
-import sql from './sql.png';
 
 export default function Skills({ skillsStyles }) {
 

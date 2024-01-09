@@ -11,13 +11,13 @@ export default function NavBar({ handleClick }) {
         </div>
         <ul>
             <li>
-            <NavHashLink smooth to="/#about"><a className="click1" onClick={handleClick}>About Me</a></NavHashLink>
+            <NavHashLink smooth to="/#about"><a className="click1" href="javascript:void(0)" onClick={handleClick}>About Me</a></NavHashLink>
             </li>
             <li>
-            <NavHashLink smooth to="/#projects"><a className="click2" onClick={handleClick}>Projects</a></NavHashLink>
+            <NavHashLink smooth to="/#projects"><a className="click2" href="javascript:void(0)" onClick={handleClick}>Projects</a></NavHashLink>
             </li>
             <li>
-            <NavHashLink smooth to="/#skills"><a className="click3" onClick={handleClick}>Skills</a></NavHashLink>
+            <NavHashLink smooth to="/#skills"><a className="click3" href="javascript:void(0)" onClick={handleClick}>Skills</a></NavHashLink>
             </li>
             <li>
             <NavLink to="/contact">Contact Me</NavLink>
