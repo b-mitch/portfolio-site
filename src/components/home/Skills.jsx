@@ -20,7 +20,7 @@ export default function Skills({ skillsStyles }) {
             <i className="fa-brands fa-square-js fa-5x"></i>
             <i className="fa-brands fa-react fa-5x"></i>
             <i className="fa-brands fa-node-js fa-5x"></i>
-            <i class="fa-brands fa-python fa-5x"></i>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f7dd5387-7045-4b53-9e6f-b1260bde9380" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
             <i class="fa-brands fa-aws fa-5x"></i>
             <i class="fa-brands fa-docker fa-5x"></i>
           </div>
