@@ -22,7 +22,7 @@ export default function NavBar({ handleClick }: NavBarProps): JSX.Element {
                 <NavHashLink smooth to="/#skills" className="click3" onClick={handleClick}>Skills</NavHashLink>
                 </li>
                 <li>
-                <NavHashLink smooth to="/#certificates">Certificates</NavHashLink>
+                <NavHashLink smooth to="/#certificates" className="click4" onClick={handleClick}>Certificates</NavHashLink>
                 </li>
                 <li>
                 <NavLink to="/contact">Contact Me</NavLink>

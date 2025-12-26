@@ -9,6 +9,7 @@ function App(): JSX.Element {
   const [aboutStyles, setAboutStyles] = useState(false);
   const [projectsStyles, setProjectsStyles] = useState(false);
   const [skillsStyles, setSkillsStyles] = useState(false);
+  const [certificatesStyles, setCertificatesStyles] = useState(false);
 
   const handleClick = (e: React.MouseEvent) => {
     const clicked = (e.target as HTMLElement).className;
@@ -17,16 +18,25 @@ function App(): JSX.Element {
       setAboutStyles(true);
       setProjectsStyles(false);
       setSkillsStyles(false);
+      setCertificatesStyles(false);
     }
     if (clicked === 'click2') {
       setAboutStyles(false);
       setProjectsStyles(true);
       setSkillsStyles(false);
+      setCertificatesStyles(false);
     }
     if (clicked === 'click3') {
       setAboutStyles(false);
       setProjectsStyles(false);
       setSkillsStyles(true);
+      setCertificatesStyles(false);
+    }
+    if (clicked === 'click4') {
+      setAboutStyles(false);
+      setProjectsStyles(false);
+      setSkillsStyles(false);
+      setCertificatesStyles(true);
     }
   }
 
@@ -39,7 +49,8 @@ function App(): JSX.Element {
             <Home 
               aboutStyles={aboutStyles}
               projectsStyles={projectsStyles}
-              skillsStyles={skillsStyles} 
+              skillsStyles={skillsStyles}
+              certificatesStyles={certificatesStyles} 
             />
           }/>
           <Route path="/contact" element={<Contact />} />

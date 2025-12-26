@@ -8,12 +8,14 @@ interface HomeProps {
     aboutStyles: boolean;
     projectsStyles: boolean;
     skillsStyles: boolean;
+    certificatesStyles: boolean;
 }
 
 export default function Home({ 
     aboutStyles,
     projectsStyles,
-    skillsStyles
+    skillsStyles,
+    certificatesStyles,
 }: HomeProps): JSX.Element {
 
     return (
@@ -22,7 +24,7 @@ export default function Home({
                 <About aboutStyles={aboutStyles}/>
                 <Projects projectsStyles={projectsStyles}/>
                 <Skills skillsStyles={skillsStyles}/>
-                <Certificates />
+                <Certificates certificatesStyles={certificatesStyles}/>
             </div>
             <div className="footer">
                 <h6>&copy; Copyright. All Rights Reserved.</h6>
