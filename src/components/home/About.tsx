@@ -1,5 +1,5 @@
 import React from 'react';
-import me from './me.jpg';
+import me from '/images/me.jpg';
 
 interface AboutProps { aboutStyles: boolean }
 
