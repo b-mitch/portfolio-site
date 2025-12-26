@@ -1,10 +1,11 @@
 import React from 'react';
 import me from './me.jpg';
 
+interface AboutProps { aboutStyles: boolean }
 
-export default function About({ aboutStyles }) {
+export default function About({ aboutStyles }: AboutProps): JSX.Element {
 
-    let altStyle;
+    let altStyle: React.CSSProperties | undefined;
     if (aboutStyles) {
         altStyle = {
             color:'darkorange',

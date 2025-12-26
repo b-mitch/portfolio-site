@@ -1,8 +1,10 @@
 import React from 'react';
 
-export default function Skills({ skillsStyles }) {
+interface SkillsProps { skillsStyles: boolean }
 
-    let altStyle;
+export default function Skills({ skillsStyles }: SkillsProps): JSX.Element {
+
+    let altStyle: React.CSSProperties | undefined;
     if (skillsStyles) {
         altStyle = {
             color:'darkorange',
@@ -22,9 +24,9 @@ export default function Skills({ skillsStyles }) {
             <i className="fa-brands fa-node-js fa-5x"></i>
             {/* <div dataIframeWidth="150" dataIframeHeight="270" dataShareBadgeId="f7dd5387-7045-4b53-9e6f-b1260bde9380" dataShareBadgeHost="https://www.credly.com"></div>
             <div dataIframeWidth="150" dataIframeHeight="270" dataShareBadgeId="08d815ee-d932-4e46-ac18-65f7a5a816a6" dataShareBadgeHost="https://www.credly.com"></div>  */}
-            <i class="fa-brands fa-python fa-5x"></i>
-            <i class="fa-brands fa-aws fa-5x"></i>
-            <i class="fa-brands fa-docker fa-5x"></i>
+            <i className="fa-brands fa-python fa-5x"></i>
+            <i className="fa-brands fa-aws fa-5x"></i>
+            <i className="fa-brands fa-docker fa-5x"></i>
           </div>
         </div>
     )

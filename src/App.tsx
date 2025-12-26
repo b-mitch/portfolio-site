@@ -5,14 +5,13 @@ import Home from './components/home/Home';
 import Contact from './components/contact/Contact';
 import NavBar from './components/nav/NavBar';
 
-function App() {
+function App(): JSX.Element {
   const [aboutStyles, setAboutStyles] = useState(false);
   const [projectsStyles, setProjectsStyles] = useState(false);
   const [skillsStyles, setSkillsStyles] = useState(false);
 
-  const handleClick = (e) => {
-
-    const clicked = e.target.className;
+  const handleClick = (e: React.MouseEvent) => {
+    const clicked = (e.target as HTMLElement).className;
 
     if (clicked === 'click1') {
       setAboutStyles(true);

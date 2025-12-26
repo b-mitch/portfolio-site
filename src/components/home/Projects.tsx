@@ -1,8 +1,10 @@
 import React from 'react';
 
-export default function Projects({ projectsStyles }) {
+interface ProjectsProps { projectsStyles: boolean }
 
-    let altStyle;
+export default function Projects({ projectsStyles }: ProjectsProps): JSX.Element {
+
+    let altStyle: React.CSSProperties | undefined;
     if (projectsStyles) {
         altStyle = {
             color:'darkorange',
