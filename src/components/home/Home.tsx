@@ -3,11 +3,17 @@ import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
 
+interface HomeProps {
+    aboutStyles: boolean;
+    projectsStyles: boolean;
+    skillsStyles: boolean;
+}
+
 export default function Home({ 
     aboutStyles,
     projectsStyles,
     skillsStyles
- }) {
+ }: HomeProps): JSX.Element {
 
     return (
         <div className='home'>
