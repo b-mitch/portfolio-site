@@ -20,10 +20,10 @@ export default function GhostScroller({ children, topOffset = 0 }: Props) {
         let vis = 0;
         if (progress >= i - 1 && progress < i) {
           // fading in
-          vis = progress - (i - 1);
+          vis = progress - (i - .6);
         } else if (progress >= i && progress < i + 1) {
           // fading out
-          vis = 1.1 - (progress - i);
+          vis = 1.2 - (progress - i);
         }
         vis = Math.max(0, Math.min(1, vis));
         el.style.setProperty('--vis', vis.toFixed(3));
@@ -47,7 +47,7 @@ export default function GhostScroller({ children, topOffset = 0 }: Props) {
     <div
       ref={containerRef}
       className="ghost-container"
-      style={{ ['--top' as any]: `${topOffset}px` }}
+      style={{ '--panels-count': children.length, '--top': `${topOffset}px` } as React.CSSProperties}
     >
       {React.Children.map(children, (child, i) => (
         <div className="ghost-panel" aria-hidden={false} key={i}>
