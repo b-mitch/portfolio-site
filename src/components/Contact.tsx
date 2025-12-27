@@ -18,9 +18,6 @@ export default function Contact(): JSX.Element {
                     <i className="fa-solid fa-envelope"> bmitchum.dev@gmail.com</i>
                 </div>
             </div>
-            <div className="contact-footer">
-                <h6>&copy; Copyright. All Rights Reserved.</h6>
-            </div>
         </div>
     )
 }

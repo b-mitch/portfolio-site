@@ -205,21 +205,60 @@ p:first-letter {
 
 .footer {
     position: relative;
-    margin-bottom: 5px;
+    margin: 5px;
     width: 100%;
-    text-align: center;
-}
-
-.contact-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 5px;
     text-align: center;
 }
 
 .certificates .cert-badge {
     margin-top: 1.5rem;
     margin-left: 1.5rem;
+}
+
+/* Ghost-scroller base */
+.ghost-container {
+    --top: 0px; /* override via prop or CSS if About is sticky */
+    position: relative;
+    /* make room for N panels so page can scroll */
+    height: calc(var(--panels-count, 4) * 100vh);
+}
+
+/* each panel stays in viewport and crossfades */
+.ghost-panel {
+    position: sticky;
+    top: var(--top);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* visual transition based on JS-driven --vis (0..1) */
+    opacity: calc(var(--vis, 0));
+    transform: translateY(calc((1 - var(--vis, 0)) * 18px));
+    transition: opacity 220ms linear, transform 220ms ease-out;
+    /* allow interactive elements inside */
+    pointer-events: auto;
+}
+
+/* prefer-reduced-motion and accessible fallback */
+@media (prefers-reduced-motion: reduce) {
+    .ghost-panel {
+        transition: none;
+        transform: none;
+    }
+}
+
+/* small screens: fall back to normal stacked flow */
+@media (max-width: 900px) {
+    .ghost-container {
+        height: auto;
+    }
+    .ghost-panel {
+        height: auto;
+        position: static;
+        opacity: 1 !important;
+        transform: none;
+    }
 }
 
 @media only screen and (min-width: 1400px) {
