@@ -13,15 +13,20 @@ export default function GhostScroller({ children, topOffset = 0 }: Props) {
     const onScroll = () => {
       if (!containerRef.current) return;
       const vh = window.innerHeight;
+      const scrollY = window.scrollY - containerRef.current.offsetTop + topOffset;
       const panels = Array.from(containerRef.current.querySelectorAll('.ghost-panel')) as HTMLElement[];
-
-      panels.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        // progress when element's top moves through viewport
-        const progress = 1 - Math.min(Math.max((rect.top - topOffset) / vh, -1), 1);
-        // map progress to 0..1 crossfade where panel is fully visible when progress ~ 1
-        const vis = Math.max(0, Math.min(1, progress));
-        el.style.setProperty('--vis', String(vis));
+      const progress = scrollY / vh;
+      panels.forEach((el, i) => {
+        let vis = 0;
+        if (progress >= i - 1 && progress < i) {
+          // fading in
+          vis = progress - (i - 1);
+        } else if (progress >= i && progress < i + 1) {
+          // fading out
+          vis = 1.1 - (progress - i);
+        }
+        vis = Math.max(0, Math.min(1, vis));
+        el.style.setProperty('--vis', vis.toFixed(3));
       });
     };
 

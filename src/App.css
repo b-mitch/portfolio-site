@@ -234,7 +234,7 @@ p:first-letter {
 
     /* visual transition based on JS-driven --vis (0..1) */
     opacity: calc(var(--vis, 0));
-    transform: translateY(calc((1 - var(--vis, 0)) * 18px));
+    transform: translateY(calc((1 - var(--vis, 0)) * 20px));
     transition: opacity 220ms linear, transform 220ms ease-out;
     /* allow interactive elements inside */
     pointer-events: auto;
