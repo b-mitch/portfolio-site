@@ -192,11 +192,6 @@ p:first-letter {
     margin-top: 20px;
 }
 
-h1 {
-    margin-left: 20px;
-    color: darkorange;
-}
-
 .icon {
     display: inline-block;
     border: 5px solid black;

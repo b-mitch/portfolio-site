@@ -1,21 +1,10 @@
 import React from 'react';
 
-interface SkillsProps { skillsStyles: boolean }
-
-export default function Skills({ skillsStyles }: SkillsProps): JSX.Element {
-
-    let altStyle: React.CSSProperties | undefined;
-    if (skillsStyles) {
-        altStyle = {
-            color:'darkorange',
-            fontSize:'200%', 
-            marginLeft:'.5em'
-        }
-    }
+export default function Skills(): JSX.Element {
 
     return (
         <div id="skills" className="skills">
-          <h2 style={altStyle} className="grow3">Skills</h2><br/>
+          <h2>Skills</h2><br/>
           <div className="logo-container">
             <i className="fa-brands fa-html5 fa-5x"></i>
             <i className="fa-brands fa-css3-alt fa-5x"></i>

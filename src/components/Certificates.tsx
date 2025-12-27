@@ -24,16 +24,7 @@ const CERTS = [
   }
 ];
 
-export default function Certificates({ certificatesStyles }: { certificatesStyles: boolean }): JSX.Element {
-
-  let altStyle: React.CSSProperties | undefined;
-  if (certificatesStyles) {
-      altStyle = {
-          color:'darkorange',
-          fontSize:'200%', 
-          marginLeft:'.5em'
-      }
-  }
+export default function Certificates(): JSX.Element {
       
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -94,7 +85,7 @@ export default function Certificates({ certificatesStyles }: { certificatesStyle
 
   return (
     <div id="certificates" className="certificates">
-      <h2 style={altStyle} className="grow3">Certificates</h2>
+      <h2>Certificates</h2>
       <div ref={containerRef} className="cert-badge"/>
     </div>
   );

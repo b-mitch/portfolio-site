@@ -3,28 +3,22 @@ import About from './About';
 import Projects from './Projects';
 import Skills from './Skills';
 import Certificates from './Certificates';
+import Contact from './Contact';
 
 interface HomeProps {
-    aboutStyles: boolean;
-    projectsStyles: boolean;
-    skillsStyles: boolean;
-    certificatesStyles: boolean;
 }
 
 export default function Home({ 
-    aboutStyles,
-    projectsStyles,
-    skillsStyles,
-    certificatesStyles,
 }: HomeProps): JSX.Element {
 
     return (
         <div className='home'>
             <div className='body'>
-                <About aboutStyles={aboutStyles}/>
-                <Projects projectsStyles={projectsStyles}/>
-                <Skills skillsStyles={skillsStyles}/>
-                <Certificates certificatesStyles={certificatesStyles}/>
+                <About />
+                <Projects />
+                <Skills />
+                <Certificates />
+                <Contact />
             </div>
             <div className="footer">
                 <h6>&copy; Copyright. All Rights Reserved.</h6>
