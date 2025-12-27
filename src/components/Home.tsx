@@ -11,13 +11,11 @@ interface HomeProps {
 
 export default function Home({ 
 }: HomeProps): JSX.Element {
-    const aboutStickyHeight = 0;
-
     return (
         <div className='home'>
             <div className='body'>
-                <About />
-                <GhostScroller topOffset={aboutStickyHeight}>
+                <GhostScroller >
+                    <About />
                     <Projects />
                     <Skills />
                     <Certificates />

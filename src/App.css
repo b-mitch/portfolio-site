@@ -217,7 +217,7 @@ p:first-letter {
 
 /* Ghost-scroller base */
 .ghost-container {
-    --top: 0px; /* override via prop or CSS if About is sticky */
+    --top: 5px;
     position: relative;
     /* make room for N panels so page can scroll */
     height: calc(var(--panels-count, 4) * 100vh);

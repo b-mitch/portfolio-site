@@ -5,7 +5,7 @@ type Props = {
   topOffset?: number;
 };
 
-export default function GhostScroller({ children, topOffset = 0 }: Props) {
+export default function GhostScroller({ children }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -13,7 +13,7 @@ export default function GhostScroller({ children, topOffset = 0 }: Props) {
     const onScroll = () => {
       if (!containerRef.current) return;
       const vh = window.innerHeight;
-      const scrollY = window.scrollY - containerRef.current.offsetTop + topOffset;
+      const scrollY = window.scrollY - containerRef.current.offsetTop;
       const panels = Array.from(containerRef.current.querySelectorAll('.ghost-panel')) as HTMLElement[];
       const progress = scrollY / vh;
       panels.forEach((el, i) => {
@@ -41,13 +41,13 @@ export default function GhostScroller({ children, topOffset = 0 }: Props) {
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-  }, [topOffset]);
+  }, []);
 
   return (
     <div
       ref={containerRef}
       className="ghost-container"
-      style={{ '--panels-count': children.length, '--top': `${topOffset}px` } as React.CSSProperties}
+      style={{ '--panels-count': children.length } as React.CSSProperties}
     >
       {React.Children.map(children, (child, i) => (
         <div className="ghost-panel" aria-hidden={false} key={i}>
