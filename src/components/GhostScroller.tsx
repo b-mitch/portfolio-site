@@ -20,10 +20,10 @@ export default function GhostScroller({ children }: Props) {
         let vis = 0;
         if (progress >= i - 1 && progress < i) {
           // fading in
-          vis = progress - (i - .6);
+          vis = progress - (i - .3);
         } else if (progress >= i && progress < i + 1) {
           // fading out
-          vis = 1.2 - (progress - i);
+          vis = 1.4 - (progress - i);
         }
         vis = Math.max(0, Math.min(1, vis));
         el.style.setProperty('--vis', vis.toFixed(3));
