@@ -16,9 +16,9 @@ export default function Home({
             <div className='body'>
                 <GhostScroller >
                     <About />
-                    <Projects />
                     <Skills />
                     <Certificates />
+                    <Projects />
                     <Contact />
                 </GhostScroller>
             </div>

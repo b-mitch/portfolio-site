@@ -4,7 +4,7 @@ export default function Skills(): JSX.Element {
 
     return (
         <div id="skills" className="skills">
-          <h2>Skills</h2><br/>
+          <h1>Skills</h1><br/>
           <div className="logo-container">
             <i className="fa-brands fa-html5 fa-5x"></i>
             <i className="fa-brands fa-css3-alt fa-5x"></i>

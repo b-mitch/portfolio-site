@@ -6,7 +6,7 @@ export default function About(): JSX.Element {
 
     return (
         <div id="about" className="about-me">
-            <h2>About Me</h2>
+            <h1>About Me</h1>
             <div className="grid-container">
                 <div className="image-container">
                     <img src={me} alt="Brenden"/>

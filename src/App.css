@@ -86,9 +86,8 @@ a:-webkit-any-link:hover {
     margin-top: 15px;
 }
 
-h2,
 h1 {
-    margin-left: 1em;
+    margin-left: .7em;
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -155,8 +154,9 @@ p:first-letter {
 
 .projects ul {
     position: relative;
-    margin-left: 1.5em;
+    margin-left: 1em;
     list-style: none;
+    font-size: 1.5em;
 }
 
 .projects a:visited {
@@ -220,7 +220,7 @@ p:first-letter {
     --top: 5px;
     position: relative;
     /* make room for N panels so page can scroll */
-    height: calc(var(--panels-count, 4) * 100vh);
+    height: calc(var(--panels-count, 5) * 100vh);
 }
 
 /* each panel stays in viewport and crossfades */

@@ -85,7 +85,7 @@ export default function Certificates(): JSX.Element {
 
   return (
     <div id="certificates" className="certificates">
-      <h2>Certificates</h2>
+      <h1>Certificates</h1>
       <div ref={containerRef} className="cert-badge"/>
     </div>
   );
