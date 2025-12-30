@@ -5,7 +5,7 @@ import me from '/images/me.jpg';
 export default function About(): JSX.Element {
 
     return (
-        <div id="about" className="about-me">
+        <div id="about" className="section">
             <h1>About Me</h1>
             <div className="grid-container">
                 <div className="image-container">

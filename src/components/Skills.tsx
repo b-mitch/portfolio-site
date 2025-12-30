@@ -3,9 +3,9 @@ import React from 'react';
 export default function Skills(): JSX.Element {
 
     return (
-        <div id="skills" className="skills">
+        <div id="skills" className="section">
           <h1>Skills</h1><br/>
-          <div className="logo-container">
+          <div className="badge-container">
             <i className="fa-brands fa-html5 fa-5x"></i>
             <i className="fa-brands fa-css3-alt fa-5x"></i>
             <i className="fa-brands fa-square-js fa-5x"></i>

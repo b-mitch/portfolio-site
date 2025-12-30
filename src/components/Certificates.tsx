@@ -84,9 +84,9 @@ export default function Certificates(): JSX.Element {
   }, []);
 
   return (
-    <div id="certificates" className="certificates">
+    <div id="certificates" className="section">
       <h1>Certificates</h1>
-      <div ref={containerRef} className="cert-badge"/>
+      <div ref={containerRef} className="badge-container"/>
     </div>
   );
 }
