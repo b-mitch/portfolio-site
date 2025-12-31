@@ -160,8 +160,8 @@ p:first-letter {
     background-image: url('../images/IMG_20171115_135035.jpg');
 }
 
-.cert-badge {
-    margin-top: 1.5rem;
+.cert-container{
+    filter: drop-shadow(0 10px 12px rgba(0,0,0,1));
 }
 
 #projects {
@@ -301,7 +301,11 @@ a:hover {
 
 @media only screen and (max-width: 950px) {
     .grid-container {
-        margin-top: 30px;
+        margin-top: 0px;
+    }
+
+    p {
+        font-size: 1.1rem;
     }
 }
 
@@ -326,7 +330,7 @@ a:hover {
     }
 
     .grid-container {
-        grid-template: 40% 40% 20% / 1fr;
+        grid-template: 40% 35% 20% / 1fr;
         margin-top: 10px;
         justify-items: center;
     }
@@ -360,7 +364,7 @@ a:hover {
 
 @media only screen and (max-width: 640px) {
     .grid-container {
-        grid-template: 30% 40% 30% / 1fr;
+        grid-template: 30% 35% 30% / 1fr;
     }
 
     .image-container {
