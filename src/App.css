@@ -55,6 +55,7 @@ p {
     padding: 0em 1em;
     text-align: justify;
     letter-spacing: .02em;
+    font-size: 1.2rem;
 }
 
 p:first-letter {
@@ -113,6 +114,7 @@ p:first-letter {
 
 #about {
     background-image: url('../images/IMG_20180718_162502.jpg');
+    padding-top: 10px
 }
 
 #skills {
@@ -147,23 +149,24 @@ p:first-letter {
     font-size: 1.8rem;
 }
 
-#projects a:link {
+a:link {
     color: darkorange;
     text-decoration: none;
 }
 
-#projects a:visited {
+a:visited {
     color: lightgray;
     text-decoration: none;
 }
 
-#projects a:hover {
+a:hover {
     color: mediumaquamarine;
     transition: color 0.3s;
 }
 
 #contact {
     background-image: url('../images/IMG_7088.jpg');
+    padding-bottom: 200px;
 }
 
 #contact-logos {
@@ -180,17 +183,6 @@ p:first-letter {
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-}
-
-.contact-logos a:link {
-    color: mediumaquamarine;
-    transition: color 0.3s;
-}
-
-.contact-logos a:focus {
-    outline: 3px dashed mediumaquamarine;
-    outline-offset: 3px;
-    border-radius: 4px;
 }
 
 .sr-only {
@@ -244,19 +236,6 @@ p:first-letter {
     }
 }
 
-/* small screens: fall back to normal stacked flow */
-@media (max-width: 900px) {
-    .ghost-container {
-        height: auto;
-    }
-    .ghost-panel {
-        height: auto;
-        position: static;
-        opacity: 1 !important;
-        transform: none;
-    }
-}
-
 @media only screen and (min-width: 1400px) {
     .about-me {
         margin-top: 30px;
@@ -272,17 +251,16 @@ p:first-letter {
         font-size: 1.5em;
     }
 
-    .projects li,
-    nav a:-webkit-any-link {
-        font-size: 24px;
-    }
-
     .image-container {
         width: 100%;
         height: 100%;
         margin: auto;
         grid-row: 1 / 3;
         grid-column: 2;
+    }
+
+    p {
+        font-size: 1.3rem;
     }
 
     .p1 {
@@ -294,10 +272,6 @@ p:first-letter {
         grid-row: 2;
         grid-column: 1;
     }
-
-    h2 {
-        font-size: 2em;
-    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -307,32 +281,41 @@ p:first-letter {
 }
 
 @media only screen and (max-width: 720px) {
-    .heading h2 {
-        float: left;
-        margin-left: 5px;
-        margin-top: 0;
-        font-size: 1.25em;
+    .ghost-container {
+        height: auto;
     }
 
-    nav a:-webkit-any-link {
-        font-size: 16px;
+    .ghost-panel {
+        height: auto;
+        position: static;
+        opacity: 1 !important;
+        transform: none;
     }
 
-    nav {
-        text-align: none;
+    #about {
+        padding-top: 0;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 
     .grid-container {
-        grid-template: 45% 35% 15% / 1fr;
-        margin-top: 20px;
+        grid-template: 40% 40% 20% / 1fr;
+        margin-top: 10px;
+        justify-items: center;
     }
 
     .image-container {
-        width: 100%;
+        width: 50%;
         height: 100%;
         grid-row: 1;
         grid-column: 1;
         border-radius: 10px;
+    }
+
+    p {
+        font-size: 1rem;
     }
 
     .p1 {
@@ -344,24 +327,23 @@ p:first-letter {
         grid-row: 3;
         grid-column: 1;
     }
+
+    #projects ul {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width: 640px) {
-    nav li {
-        padding: 0 2.5px;
-        margin: 0;
-    }
-
-    nav ul {
-        width: 60%;
-        padding: 0;
-        margin-right: 3px;
-        margin-top: 2px;
-    }
-
     .grid-container {
-        grid-template: 40% 30% 30% / 1fr;
-        margin-top: 20px;
+        grid-template: 30% 40% 30% / 1fr;
+    }
+
+    .image-container {
+        width: 50%;
+        height: 100%;
+        grid-row: 1;
+        grid-column: 1;
+        border-radius: 10px;
     }
 }
 
@@ -376,24 +358,8 @@ p:first-letter {
 }
 
 @media only screen and (max-width: 462px) {
-    nav {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .heading {
-        width: 25%;
-        text-align: left;
-    }
-
     header {
         height: 75px;
-    }
-
-    nav ul {
-        width: 75%;
-        text-align: right;
-        margin-top: 15px;
     }
 
     .grid-container {

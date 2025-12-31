@@ -9,11 +9,11 @@ export default function Contact(): JSX.Element {
             <h1>Let's Chat!</h1>
             <div id="contact-logos">
                 <a href="mailto:bmitchum.dev@gmail.com" aria-label="Send email" title="Email">
-                    <i className="fa-solid fa-envelope fa-2x" aria-hidden="true"></i>
+                    <i className="fa-solid fa-envelope fa-3x" aria-hidden="true"></i>
                     <span className="sr-only">Email</span>
                 </a>
                 <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="View LinkedIn profile" title="LinkedIn">
-                    <i className="fa-brands fa-linkedin fa-2x" aria-hidden="true"></i>
+                    <i className="fa-brands fa-linkedin fa-3x" aria-hidden="true"></i>
                     <span className="sr-only">LinkedIn</span>
                 </a>
             </div>
