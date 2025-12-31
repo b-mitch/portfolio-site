@@ -28,6 +28,33 @@ h1, p, ul {
     text-shadow: 0 2px 6px rgba(0,0,0,0.95);
 }
 
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;  
+    background: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.55))
+
+}
+
+.section > * {
+    position: relative;
+    z-index: 1;
+}
+
 .grid-container {
     display: grid;
     width: 100%;
@@ -48,7 +75,8 @@ img {
     position: relative;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 20px;
+    border: 2px solid aliceblue;
 }
 
 p {
@@ -85,35 +113,8 @@ p:first-letter {
     align-items: center;
 }
 
-.section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;  
-    background: rgba(0,0,0,0.25);
-
-}
-
-.section > * {
-    position: relative;
-    z-index: 1;
-}
-
 #about {
-    background-image: url('../images/IMG_20180718_162502.jpg');
+    background-image: url('../images/IMG_20171207_094136.jpg');
     padding-top: 10px
 }
 
@@ -190,8 +191,7 @@ a:hover {
 }
 
 #contact {
-    background-image: url('../images/IMG_7088.jpg');
-    padding-bottom: 200px;
+    background-image: url('../images/IMG_20180826_134330.jpg');
 }
 
 #contact-logos {
