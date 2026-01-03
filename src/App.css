@@ -114,13 +114,13 @@ p:first-letter {
 }
 
 #about {
-    background-image: url('../images/IMG_20171207_094136.jpg');
+    background-image: url('../images/otago_nz.jpg');
     padding-top: 10px
 }
 
 #skills {
     position: relative;
-    background-image: url('../images/IMG_20171127_120304.jpg');
+    background-image: url('../images/aoraki_nz.jpg');
 }
 
 .badge-container {
@@ -157,7 +157,7 @@ p:first-letter {
 }
 
 #certificates {
-    background-image: url('../images/IMG_20171115_135035.jpg');
+    background-image: url('../images/abel_tasman_nz.jpg');
 }
 
 .cert-container{
@@ -166,7 +166,7 @@ p:first-letter {
 
 #projects {
     position: relative;
-    background-image: url('../images/IMG_20171109_095031.jpg');
+    background-image: url('../images/rotorua_nz.jpg');
 }
 
 #projects ul {
@@ -191,7 +191,7 @@ a:hover {
 }
 
 #contact {
-    background-image: url('../images/IMG_20180826_134330.jpg');
+    background-image: url('../images/little_grand_canyon_ut.jpg');
 }
 
 #contact-logos {
