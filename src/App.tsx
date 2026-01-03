@@ -1,48 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/home/Home';
-import Contact from './components/contact/Contact';
-import NavBar from './components/nav/NavBar';
+import Home from './components/Home';
 
 function App(): JSX.Element {
-  const [aboutStyles, setAboutStyles] = useState(false);
-  const [projectsStyles, setProjectsStyles] = useState(false);
-  const [skillsStyles, setSkillsStyles] = useState(false);
-
-  const handleClick = (e: React.MouseEvent) => {
-    const clicked = (e.target as HTMLElement).className;
-
-    if (clicked === 'click1') {
-      setAboutStyles(true);
-      setProjectsStyles(false);
-      setSkillsStyles(false);
-    }
-    if (clicked === 'click2') {
-      setAboutStyles(false);
-      setProjectsStyles(true);
-      setSkillsStyles(false);
-    }
-    if (clicked === 'click3') {
-      setAboutStyles(false);
-      setProjectsStyles(false);
-      setSkillsStyles(true);
-    }
-  }
 
   return (
     <div className="App">
-        <NavBar handleClick={handleClick}/>
-
         <Routes>
           <Route path="/" element={
-            <Home 
-              aboutStyles={aboutStyles}
-              projectsStyles={projectsStyles}
-              skillsStyles={skillsStyles} 
-            />
+            <Home />
           }/>
-          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
   );
