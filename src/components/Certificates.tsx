@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import certSa from '/images/cert-sa.png';
 import certDev from '/images/cert-dev.png';
 import certPy from '/images/cert-py.png';
+import certMl from '/images/cert-ml.png';
 
 const CERTS = [
   {
@@ -15,6 +16,12 @@ const CERTS = [
     embedHtml: "<div data-iframe-width=\"200\" data-iframe-height=\"250\" data-share-badge-id=\"5056b57c-3566-4ef3-aa2c-a05e8c2d6ff7\" data-share-badge-host=\"https://www.credly.com\"></div>",
     scriptSrc: "//cdn.credly.com/assets/utilities/embed.js",
     imgSrc: certDev
+  },
+  {
+    id: 'cert-ml',
+    embedHtml: "<div data-iframe-width=\"200\" data-iframe-height=\"250\" data-share-badge-id=\"5b049adc-86ca-4b97-ae4f-1966b08cf57b\" data-share-badge-host=\"https://www.credly.com\"></div><script type=\"text/javascript\" async src=\"//cdn.credly.com/assets/utilities/embed.js\"></script>",
+    scriptSrc: "//cdn.credly.com/assets/utilities/embed.js",
+    imgSrc: certMl
   },
   {
     id: 'cert-py',
